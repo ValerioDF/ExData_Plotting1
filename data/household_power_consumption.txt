@@ -1,0 +1,8 @@
+<html>
+<head>
+<title>bit.ly</title>
+</head>
+<body>
+<a href="http://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip">moved here</a>
+</body>
+</html>

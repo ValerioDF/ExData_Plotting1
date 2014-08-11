@@ -1,0 +1,21 @@
+# Load data
+datafile <- "/Users/Pezzenti/Desktop/R course/data/household_power_consumption.txt"
+data <- read.table(datafile, sep = ";", header = T, na.strings = "?")
+
+# Convert to Date/Time clsases
+data[,1] <- as.Date(data$Date,"%d/%m/%Y")
+data[,2] <- as.Date(data$Time,"%H/%M/%S") 
+
+
+# Create a subset of the data between 2007-02-01 and 2007-02-02
+subData <- subset(data, data$Date %in% as.Date(c("2007-02-01","2007-02-02")))
+
+
+# Create Plot 1 
+hist(subData[,3], col = "Red", main = "Global Active Power", xlab = "Global Active Power (kilowatts)")
+
+# Copy to PNG file for submission
+dev.copy(png,file="plot1.png")
+
+# Close device
+dev.off()
